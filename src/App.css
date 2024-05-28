@@ -40,7 +40,7 @@ html:focus-within{
 
 .section{
   /* height: 400px; */
-  margin: 80px 120px;
+  margin: 40px 120px;
   width: 80vw;  
 }
 
@@ -82,6 +82,7 @@ nav{
   align-items: center;
   justify-content: space-between;
   color: rgba(255, 255, 255, 0.906);
+  height: 650px;
 }
 
 .profile-img {
@@ -149,4 +150,25 @@ nav{
 
 .social-icon img{
   width: 3.5vw;
+}
+
+.up-arrow{
+  color: white;
+  margin: 50px;
+  text-decoration: none;
+  border: 0.5px solid white;
+  padding: 10px 22px;
+  border-radius: 20px;
+  font-size: 19px;
+  box-shadow: 0px 0px 15px white; 
+  font-size: 23px;
+}
+
+.app-arrow-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  bottom: 20px; 
+  width: 100vw;
 }
