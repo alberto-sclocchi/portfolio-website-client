@@ -40,21 +40,21 @@ html:focus-within{
 
 .section{
   /* height: 400px; */
-  margin: 105px 120px;
+  margin: 80px 120px;
   width: 80vw;  
 }
 
 nav{
   background-color: black;
   box-shadow: 0px 0px 15px white; 
-  width: 45vw;
+  width: 47vw;
   border-radius: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   border: 0.5px solid white;
-  font-size: 18px;
+  font-size: 19px;
   position: sticky;
   top: 50px;
 }
@@ -65,7 +65,7 @@ nav{
   color: white;
   border-radius: 20px;
   width: 10vw;
-  padding: 13px 15px;
+  padding: 13px 17px;
   font-weight: 900;
   overflow: hidden;
   background-color: black;
@@ -81,7 +81,7 @@ nav{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  color: white;
+  color: rgba(255, 255, 255, 0.906);
 }
 
 .profile-img {
@@ -137,4 +137,16 @@ nav{
 
 .phrases{
   text-decoration: underline;
+}
+
+#section-2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 75px;
+}
+
+.social-icon img{
+  width: 3.5vw;
 }
