@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import PortfolioPage from './components/core/PortfolioPage';
 import NavBar from './components/core/NavBar';
 import UpArrow from './components/core/UpArrow';
+import Footer from './components/core/Footer';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route  exact path="/" element={<PortfolioPage />}/>
       </Routes>
       <UpArrow />
+      <Footer />
     </div>
   );
 }
