@@ -3,9 +3,6 @@ import { HashLink as Link } from 'react-router-hash-link'
 
 export default function UpArrow() {
   return (
-    <div className='app-arrow-div'>
-        <p>kkk</p>
-        <Link to="#section-1" className='up-arrow'>↑</Link>
-    </div>
+    <Link to="#about-me" className='up-arrow'>↑</Link>
   )
 }
