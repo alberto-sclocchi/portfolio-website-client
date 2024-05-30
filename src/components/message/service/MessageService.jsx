@@ -5,7 +5,6 @@ export default class MessageService {
         let service = axios.create({
             // baseURL: `http://localhost:5005/message`,
             baseURL:'https://portfolio-website-api.fly.dev/message',
-            withCredentials: true
         })
 
         this.service = service;
