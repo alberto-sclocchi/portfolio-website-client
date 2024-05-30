@@ -43,36 +43,30 @@ export default function MessageForm() {
         <form onSubmit={handleSubmit}>
           <div className="important-info">
             <div>
-              <label>First Name</label>
-              <input  className="name" type="text" name="firstName" value={formData.firstName} onChange={handleChange}/>
+              <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder='First Name'/>
             </div>
 
             <div>
-              <label>Last Name</label>
-              <input className="name" type="text" name="lastName" value={formData.lastName} onChange={handleChange}/>
+              <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder='Last Name'/>
             </div>
           </div>
 
           <div className="important-info">
             <div>
-              <label>Email</label>
-              <input className="email" type="text" name="email" value={formData.email} onChange={handleChange}/>
+              <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder='Email'/>
             </div>
 
             <div>
-              <label>Phone Number</label>
-              <input type="text" name="number" value={formData.number} onChange={handleChange}/>
+              <input type="text" name="number" value={formData.number} onChange={handleChange}  placeholder='Phone Number'/>
             </div>
           </div>
 
           <div className="form-div">
-              <label>Message Subject</label>
-              <input type="text" name="subject" value={formData.subject} onChange={handleChange}/>
+              <input type="text" name="subject" value={formData.subject} onChange={handleChange}  placeholder='Message Subject'/>
           </div>
 
           <div className="form-div">
-              <label>Message</label>
-              <textarea type="text" name="message" value={formData.message} onChange={handleChange}/>
+              <textarea type="text" name="message" value={formData.message} onChange={handleChange} placeholder='Message'/>
           </div>
 
           <div className='button-div'>

@@ -7,7 +7,7 @@
   font-family:'Trebuchet MS';
 }
 
-html:focus-within{
+*{
   scroll-behavior: smooth;
 }
 
@@ -413,19 +413,10 @@ nav{
   width: 48.2vw;
 }
 
-.email{
-  width: 17vw;
-}
-
-.name{
-  width: 14.65vw;
-}
-
 .form-div textarea{
   height: 200px;
   resize: none;
   background-color: rgba(255, 255, 255, 0.906);
-
 }
 
 #contact-me input, .form-div textarea{
@@ -433,6 +424,7 @@ nav{
   padding: 0px 10px;
   font-size: 18px;
   font-family: 'Trebuchet MS';
+  padding: 5px 10px;
 }
 
 
@@ -457,4 +449,8 @@ footer{
 
 .result{
   text-decoration: underline;
+}
+
+.important-info input{
+  width: 22.6vw;
 }
