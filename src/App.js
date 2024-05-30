@@ -5,16 +5,19 @@ import PortfolioPage from './components/core/PortfolioPage';
 import NavBar from './components/core/NavBar';
 import UpArrow from './components/core/UpArrow';
 import Footer from './components/core/Footer';
+import { MessageProvider } from './components/message/context/MessageContext.context';
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <Routes>
-        <Route  exact path="/" element={<PortfolioPage />}/>
-      </Routes>
-      <UpArrow />
+      <MessageProvider>
+        <Routes>
+          <Route  exact path="/" element={<PortfolioPage />}/>
+        </Routes>
+      </MessageProvider>
       <Footer />
+      <UpArrow />
     </div>
   );
 }

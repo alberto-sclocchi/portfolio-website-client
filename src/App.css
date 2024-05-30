@@ -302,7 +302,7 @@ nav{
 }
 
 .projects-div{
-  height: 400px;
+  height: 450px;
   margin: 20px 0px;
 }
 
@@ -373,17 +373,19 @@ nav{
 
 #contact-me img{
   width: 30vw;
+
 }
 
 #contact-me div form{
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 25px;
   align-items: flex-start;
 }
 
 #contact-me input{
-  height: 25px;
+  height: 27px;
+  background-color: rgba(255, 255, 255, 0.906);
 }
 
 
@@ -404,7 +406,7 @@ nav{
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  column-gap: 5px;;
+  column-gap: 5px;
 }
 
 .form-div  input, .form-div textarea{
@@ -415,16 +417,22 @@ nav{
   width: 17vw;
 }
 
+.name{
+  width: 14.65vw;
+}
 
 .form-div textarea{
   height: 200px;
   resize: none;
+  background-color: rgba(255, 255, 255, 0.906);
+
 }
 
 #contact-me input, .form-div textarea{
   border-radius: 5px;
   padding: 0px 10px;
   font-size: 18px;
+  font-family: 'Trebuchet MS';
 }
 
 
@@ -435,5 +443,18 @@ nav{
 footer{
   height: 150px;
   color: rgba(255, 255, 255, 0.906); 
+  margin-top: 30px;
+}
 
+
+.button-div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 20px;
+  height: 50px;
+}
+
+.result{
+  text-decoration: underline;
 }
