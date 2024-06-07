@@ -1,6 +1,7 @@
 import React from 'react'
 import profileImg from '../../images/alberto-sclocchi.jpeg'
 import verified from '../../images/verified.png'
+import DownloadResume from './DownloadResume'
 
 export default function AboutMe() {
   return (
@@ -12,6 +13,7 @@ export default function AboutMe() {
       <div className="profile-img">
         <img src={profileImg} alt="alberto-sclocchi-img"/>
         <h3>Alberto Sclocchi <img src={verified} alt="verified"/></h3>
+        <DownloadResume />
       </div>
     </div>
   )
