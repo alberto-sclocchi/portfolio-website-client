@@ -7,6 +7,7 @@ import javaScript from '../../images/javascript-icon.png'
 import react from '../../images/react-icon.png'
 import express from '../../images/express-icon.png'
 import mongoDB from '../../images/mongodb-icon.png'
+import handlebars from '../../images/handlebars-icon.png'
 import html from '../../images/html-icon.png'
 import css from '../../images/css-icon.png'
 import gymImg from '../../images/gym-img.jpeg'
@@ -58,6 +59,7 @@ export default function Projects() {
             <img className="tech-proj" src={mongoDB}  alt="mongoDB-icon" />
             <img className="tech-proj" src={html}  alt="html-icon"/>
             <img className="tech-proj" src={css}  alt="css-icon"/>
+            <img className="tech-proj" src={handlebars}  alt="handlebars-icon"/>
           </div>
         </div>
       </div>

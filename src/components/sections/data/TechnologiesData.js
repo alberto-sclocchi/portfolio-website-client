@@ -36,5 +36,9 @@ export const technologiesData = [
     {
         techName: "C",
         imgUrl: "c-icon.png"
-    }  
+    },
+    {
+        techName: "Handlebars",
+        imgUrl: "handlebars-icon.png",
+    }   
 ]

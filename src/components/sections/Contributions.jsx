@@ -13,10 +13,12 @@ export default function Contributions() {
           fontSize={20} 
           colorScheme="dark" 
           blockSize={17}
-          theme={{
-            dark: ['#333', 'rgba(255, 255, 255, 0.906)']    
+          // theme={{
+          //   dark: ['#333', 'rgba(255, 255, 255, 0.906)']    
+          // }}
+          labels={{
+            totalCount: `Contributions in {{year}}`
           }}
-          hideTotalCount
         />
     </div>
   )
