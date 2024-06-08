@@ -4,6 +4,7 @@ import ContactMe from '../sections/ContactMe'
 import Technologies from '../sections/Technologies'
 import Projects from '../sections/Projects'
 import MessageForm from '../message/MessageForm'
+import Contributions from '../sections/Contributions'
 
 export default function PortfolioPage() {
   return (
@@ -12,6 +13,7 @@ export default function PortfolioPage() {
       <ContactMe />
       <Technologies />
       <Projects />
+      <Contributions />
       <MessageForm />
     </div>
   )
