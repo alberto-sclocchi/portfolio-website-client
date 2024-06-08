@@ -466,6 +466,13 @@ footer{
   font-weight: 900;
 }
 
+@media only screen and (max-width: 1200px) {
+  #contributions{
+    display: none;
+  }
+}
+
+
 @media only screen and (max-width: 600px) {
 
 
@@ -604,9 +611,5 @@ footer{
 
   .phone-img{
     width: 10vw;
-  }
-
-  #contributions{
-    display: none;
   }
 }

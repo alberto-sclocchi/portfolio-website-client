@@ -7,7 +7,17 @@ export default function Contributions() {
 
   return (
     <div id="contributions">
-        <GitHubCalendar username="alberto-sclocchi" year={currentYear} fontSize={20} colorScheme="dark" blockSize={17}/>
+        <GitHubCalendar 
+          username="alberto-sclocchi" 
+          year={currentYear} 
+          fontSize={20} 
+          colorScheme="dark" 
+          blockSize={17}
+          theme={{
+            dark: ['#333', 'rgba(255, 255, 255, 0.906)']    
+          }}
+          hideTotalCount
+        />
     </div>
   )
 }
