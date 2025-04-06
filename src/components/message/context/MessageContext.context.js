@@ -12,10 +12,10 @@ export const MessageProvider = ({children}) => {
 
 
     const sendMessage = async (message) => {
-        const messageAPI = await service.createMessage(message);
+        const successAPI = await service.createMessage(message);
 
-        if (messageAPI.message){
-            setResult(messageAPI.message)
+        if (!successAPI.success){
+            setResult(successAPI.success)
         }
         else {
             setResult("Thank you for the message. I will soon get back to you.")
