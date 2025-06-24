@@ -37,7 +37,7 @@ export default function MessageForm() {
   }
 
   return (
-    <div className="section" id="contact-me">
+    <div className="section" id="message-me">
       <h2 className="section-title">Contact Me</h2>
       <div>
         <form onSubmit={handleSubmit}>
@@ -66,7 +66,7 @@ export default function MessageForm() {
           </div>
 
           <div className="form-div">
-              <textarea type="text" name="message" value={formData.message} onChange={handleChange} placeholder='Message'/>
+              <textarea type="text" name="message" value={formData.message} onChange={handleChange} placeholder="Type your message here... (e.g. Let's connect, collaborate, or just say hi!)"/>
           </div>
 
           <div className='button-div'>

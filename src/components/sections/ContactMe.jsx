@@ -8,7 +8,7 @@ import phone from '../../images/phone-icon.png'
 
 export default function ContactMe() {
   return (
-    <div className="section" id="socials">
+    <div className="section" id="contact-me">
       <div className="social-icon-div">
         <Link className="social-icon" to="https://www.instagram.com/_albe.s_/" target="_blank"><img src={instagram} alt="instagram"/></Link>
         <Link className="social-icon" to="https://www.linkedin.com/in/alberto-sclocchi/" target="_blank"><img src={linkedIn} alt="linkedIn"/></Link>
