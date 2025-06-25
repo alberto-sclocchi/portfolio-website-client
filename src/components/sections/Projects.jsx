@@ -1,14 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import github from '../../images/git-hub-proj.png'
 import soccerImg from '../../images/soccer-img.jpeg'
-import nodeJS from '../../images/node-icon.png'
-import javaScript from '../../images/javascript-icon.png'
-import react from '../../images/react-icon.png'
-import express from '../../images/express-icon.png'
-import mongoDB from '../../images/mongodb-icon.png'
-import handlebars from '../../images/handlebars-icon.png'
-import html from '../../images/html-icon.png'
-import css from '../../images/css-icon.png'
 import gymImg from '../../images/gym-img.jpeg'
 import marioImg from '../../images/mario-bros.png'
 import flipIcon from '../../images/flip-icon.png'
@@ -48,7 +40,7 @@ export default function Projects() {
         <div className={`flip-card-inner ${flip === 0 ? "flipped" : flip === 1 ? "" : ""}`}>
           <div className="flip-card-front" style={{background:`url(${soccerImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
             <div>
-              <Link to="#contact-me" className='button-link website-link'>website</Link>
+              <Link className='button-link website-link' to="https://project-soccer.onrender.com"  target='_blank'>website</Link>
               <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
             </div>
             <Link to="https://github.com/alberto-sclocchi/project-soccer-app-api" target="_blank"><img src={github} alt="github-icon" className='github-icon'/></Link>
@@ -65,7 +57,7 @@ export default function Projects() {
         <div className={`flip-card-inner ${flip === 2 ? "flipped" : flip === 3 ? "" : ""}`}>
           <div className="flip-card-front" style={{background:`url(${marioImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
             <div>
-              <Link to="#contact-me" className='button-link website-link'>website</Link>
+              <Link className='button-link website-link' to="https://alberto-sclocchi.github.io/project-mario-game/" target='_blank'>website</Link>
               <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
             </div>
             <Link to="https://github.com/alberto-sclocchi/project-mario-game" target="_blank"><img src={github} alt="github-icon" className='github-icon'/></Link>
@@ -82,7 +74,7 @@ export default function Projects() {
         <div className={`flip-card-inner ${flip === 4 ? "flipped" : flip === 5 ? "" : ""}`}>
           <div className="flip-card-front" style={{background:`url(${gymImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
             <div>
-              <Link to="#contact-me" className='button-link website-link'>website</Link>
+              <Link className='button-link website-link' to="https://project-gym-app-patient-wildflower-2606.fly.dev" target='_blank'>website</Link>
               <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
             </div>
             <Link to="https://github.com/alberto-sclocchi/project-gym-app" target="_blank"><img src={github} alt="github-icon" className='github-icon'/></Link>

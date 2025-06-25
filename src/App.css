@@ -248,6 +248,13 @@ nav{
 
 .social-icon img{
   width: 3.5vw;
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icon img:hover{
+  scale: 1.1;
+  opacity: 1;
 }
 
 #contact-me div{
@@ -255,10 +262,6 @@ nav{
   flex-direction: row;
   align-items: center;
   margin: 0px 20px;
-}
-
-.social-icon-div{
-  column-gap: 70px;
 }
 
 .phone-img{
@@ -281,9 +284,9 @@ nav{
   border-radius: 10px;
   box-shadow: 0px 0px 15px #157add; 
   font-size: 2rem;
-  position: sticky;
-  bottom: 20px; 
-  left: 100vw;
+  position: fixed;
+  bottom: 20px;
+  left: 90vw;
   width: 4vw;
   height: 4vw;
   transition: 
@@ -439,14 +442,19 @@ nav{
 
 
 @keyframes rotate {
-  0% {transform: rotate(0deg)}
-  100% {transform: rotate(360deg)}
+  0% {transform: rotate(360deg)}
+  100% {transform: rotate(0deg)}
 }
 
 .flip-icon{
   margin: 1vw 2vw;
-  width: 3vw;
+  width: 2.7vw;
   filter: invert(1);
+  box-shadow: 0 0 10px black;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  padding: 0.2vw;
+
 }
 
 .flip-icon:hover{
@@ -513,7 +521,6 @@ nav{
 
 #message-me img{
   width: 20vw;
-
 }
 
 #message-me form{
@@ -550,8 +557,8 @@ nav{
 .important-info input{
   width: 100%;
   font-size: 1.2rem;
-  font-family: 'Lato';
-  padding: 0.3vw 0.7vw;
+  font-family: 'Audiowide';
+  padding: 0.5vw 0.7vw;
   border: none;
   border-radius: 10px;
   box-shadow: 0 0 10px #157add;
@@ -563,10 +570,25 @@ nav{
   height: 225px;
 }
 
-footer{
-  height: 150px;
+#footer{
+  width: 100%;
+  height: auto;
+  background-color: red;
   color: rgba(255, 255, 255, 0.906); 
-  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #151f31;
+  box-shadow: 0 0 10px #157add;
+}
+
+.social-icon-div{
+  padding: 4vw 9vw;
+  gap: 4vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 
@@ -582,19 +604,6 @@ footer{
   text-decoration: underline;
 }
 
-.important-info input{
-  width: 22.6vw;
-}
-
-#contributions{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
-  color: rgba(255, 255, 255, 0.906);
-  justify-content: center;
-  font-weight: 900;
-}
 
 @media only screen and (max-width: 1200px) {
   #contributions{
