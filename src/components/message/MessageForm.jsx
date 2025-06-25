@@ -42,23 +42,13 @@ export default function MessageForm() {
       <div>
         <form onSubmit={handleSubmit}>
           <div className="important-info">
-            <div>
-              <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder='First Name'/>
-            </div>
-
-            <div>
-              <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder='Last Name'/>
-            </div>
+            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder='First Name'/>
+            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder='Last Name'/>
           </div>
 
           <div className="important-info">
-            <div>
-              <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder='Email'/>
-            </div>
-
-            <div>
-              <input type="text" name="number" value={formData.number} onChange={handleChange}  placeholder='Phone Number'/>
-            </div>
+            <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder='Email'/>
+            <input type="text" name="number" value={formData.number} onChange={handleChange}  placeholder='Phone Number'/>
           </div>
 
           <div className="form-div">

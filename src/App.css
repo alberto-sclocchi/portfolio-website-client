@@ -188,7 +188,7 @@ nav{
   background-color: #051016;
   padding: 0.6vw 0.7vw;
   border-radius: 10px;
-  height: 2vw;
+  height: 60%;
 }
 
 .section-title{
@@ -210,6 +210,7 @@ nav{
   font-family: 'Audiowide';
   width: 100%;
   padding: 0 0.5vw;
+  height: 5vw;
 }
 
 #hello-emoji{
@@ -506,8 +507,7 @@ nav{
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
-  width: 100%;
+  gap: 6vw;
   margin: 30px 0px;
 }
 
@@ -516,60 +516,51 @@ nav{
 
 }
 
-#message-me div form{
+#message-me form{
+  width: 50vw;
+  height: auto;
   display: flex;
   flex-direction: column;
-  row-gap: 25px;
-  align-items: flex-start;
+  align-items: start;
+  justify-content: center;
+  gap: 1.5vw;
 }
 
 #message-me input{
-  height: 27px;
-  background-color: rgba(255, 255, 255, 0.906);
-}
-
-
-.form-div{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  row-gap: 5px;
+  height: 3vw;
+  width: 100%;
 }
 
 .important-info{
   display: flex;
   flex-direction: row;
-  column-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5vw;
+  width: 100%;
 }
 
-.important-info div{
+.form-div{  
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  column-gap: 5px;
 }
 
-.form-div  input, .form-div textarea{
-  width: 48.2vw;
+.form-div input,
+.form-div textarea,
+.important-info input{
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: 'Lato';
+  padding: 0.3vw 0.7vw;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #157add;
+  background-color: #151f31;
+  color: whitesmoke;
 }
 
 .form-div textarea{
-  height: 200px;
-  resize: none;
-  background-color: rgba(255, 255, 255, 0.906);
-}
-
-#message-me input, .form-div textarea{
-  border-radius: 5px;
-  padding: 0px 10px;
-  font-size: 18px;
-  font-family: 'Trebuchet MS';
-  padding: 5px 10px;
-}
-
-
-#message-me div form button{
-  font-size: 22px;
+  height: 225px;
 }
 
 footer{
