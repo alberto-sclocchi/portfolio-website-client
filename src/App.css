@@ -408,7 +408,7 @@ nav{
   transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
-  justify-content: center;  
+  justify-content: start;  
 }
 
 #projects{
@@ -459,6 +459,43 @@ nav{
 
 .flip-icon:hover{
   animation: rotate 1.5s linear infinite;
+}
+
+.flip-card-back div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flip-card-back  h2{
+  margin: 1vw 2vw;
+}
+
+.flip-card-back ul{
+  height: 40%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  flex-wrap: wrap;
+  padding: 1vw 1.5vw;
+}
+
+.flip-card-back li{
+  background-color: #157add;
+  padding: 0.5vw 1vw;
+  border-radius: 20px;
+  opacity:0.9;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.flip-card-back li:hover{
+  scale: 1.1;
+  opacity: 1;
 }
 
 
