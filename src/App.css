@@ -355,6 +355,7 @@ nav{
   width: 40vw;
   height: 40vh;
   perspective: 1000px; /* Enables 3D effect */
+  cursor: pointer;
 }
 
 .flip-card-inner {
@@ -377,25 +378,33 @@ nav{
   height: 100%;
   backface-visibility: hidden;
   border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;  
   box-shadow: 0 0 10px #157add;
 }
 
-.flip-card-back p{
-  padding: 0 1.5vw;
+.flip-card-front {
+  background-color: #000; /* fallback for empty areas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  align-items: start;
+
 }
 
-.flip-card-front {
-  background-color: #111;
-  color: white;
+.flip-card-front div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .flip-card-back {
   background-color: #151f31;
   color: white;
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
 }
 
 #projects{
@@ -413,7 +422,38 @@ nav{
   padding-top: 1.5vh;
 }
 
-.website-link{
+.github-icon{
+  width: 3vw;
+  margin: 1vw 2vw;
+  box-shadow: 0 0 10px #157add;
+  border-radius: 50%;
+  filter: brightness(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.github-icon:hover{
+  scale:1.1;
+  filter: brightness(1.5)
+}
+
+
+@keyframes rotate {
+  0% {transform: rotate(0deg)}
+  100% {transform: rotate(360deg)}
+}
+
+.flip-icon{
+  margin: 1vw 2vw;
+  width: 3vw;
+  filter: invert(1);
+}
+
+.flip-icon:hover{
+  animation: rotate 1.5s linear infinite;
+}
+
+
+.button-link{
   color: #051016;
   background: linear-gradient(90deg,#157add);
   background-size: 0% 100%;
@@ -426,6 +466,7 @@ nav{
   font-weight: 900;
   border-radius: 20px;
   width: 10vw;
+  align-items: center;
   transition: 0.5s ease-in-out;
   outline: none;
   border: none;
@@ -433,12 +474,22 @@ nav{
   flex-direction: row;
   justify-content: center;
   cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Audiowide';
+  font-size: 1.2rem;
 }
 
-.website-link:hover{
+.button-link:hover{
   color: white;
   background-size: 100% 100%;
   opacity: 1;
+}
+
+.website-link{
+  height: 1.5vw;
+  width: 8.5vw;
+  font-size: 1.1rem;
+  margin: 1vw;
 }
 
 #message-me{

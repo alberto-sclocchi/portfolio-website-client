@@ -70,7 +70,7 @@ export default function MessageForm() {
           </div>
 
           <div className='button-div'>
-            <button className='website-link'>Send</button>
+            <button className='button-link'>Send</button>
             {!!result && <p className='result'>{result}</p>}
           </div>
         </form>

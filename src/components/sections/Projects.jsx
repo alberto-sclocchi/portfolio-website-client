@@ -11,16 +11,18 @@ import html from '../../images/html-icon.png'
 import css from '../../images/css-icon.png'
 import gymImg from '../../images/gym-img.jpeg'
 import marioImg from '../../images/mario-bros.png'
+import flipIcon from '../../images/flip-icon.png'
+import { HashLink as Link } from 'react-router-hash-link'
 
 export default function Projects() {
   const [ flip, setFlip ] = useState(null)
 
   useEffect(() => {
-    const projects = document.querySelectorAll(".flip-card");
+    const projects = document.querySelectorAll(".flip-button");
 
     projects.forEach((project, i) => {
+      console.log("here clicking", i)
       project.addEventListener("click", () => {
-        console.log("here", i);
         projects.forEach((otherProject, index) => {
           if(project === otherProject){
             setFlip(index);
@@ -41,44 +43,73 @@ export default function Projects() {
   return (
     <div id="projects">    
       <h2 className="section-title">Projects</h2>  
+      {/* <h2 className='section-title'>{flip}</h2> */}
       <div className="flip-card">
-        <div className={`flip-card-inner ${flip === 0 ? "flipped" : ""}`}>
-          <img className="flip-card-front" src={soccerImg} alt="soccer-img"/>
-
-          <div className="flip-card-back">
-            <h2 className='section-title'>KickShop</h2>
+        <div className={`flip-card-inner ${flip === 0 ? "flipped" : flip === 1 ? "" : ""}`}>
+          <div className="flip-card-front" style={{background:`url(${soccerImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+            <div>
+              <Link to="#contact-me" className='button-link website-link'>See more</Link>
+              <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
+            </div>
+            <Link to="#contact-me"><img src={github} alt="github-icon" className='github-icon'/></Link>
           </div>
-        </div>
-      </div>
-
-      <div className="flip-card">
-        <div className={`flip-card-inner ${flip === 1 ? "flipped" : ""}`}>
-          <img className="flip-card-front" src={gymImg} alt="gym-img"/>
 
           <div className="flip-card-back">
-            <h2 className='section-title'>FitHub</h2>
-          </div>
-        </div>
-      </div>
-
-      <div className="flip-card">
-        <div className={`flip-card-inner ${flip === 2 ? "flipped" : ""}`}>
-          <img className="flip-card-front" src={soccerImg} alt="soccer-img"/>
-
-          <div className="flip-card-back">
-            <h2 className='section-title'>WordleLookAlike</h2>
-          </div>      
-        </div>
-      </div>
-
-      <div className="flip-card">
-        <div className={`flip-card-inner ${flip === 3 ? "flipped" : ""}`}>
-          <img className="flip-card-front" src={marioImg} alt="mario-img"/>
-
-          <div className="flip-card-back">
+            <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
             <h2 className='section-title'>Super Mario Bros</h2>
           </div>
-        </div>
+       </div>
+      </div>
+
+      <div className="flip-card">
+        <div className={`flip-card-inner ${flip === 2 ? "flipped" : flip === 3 ? "" : ""}`}>
+          <div className="flip-card-front" style={{background:`url(${marioImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+            <div>
+              <Link to="#contact-me" className='button-link website-link'>See more</Link>
+              <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
+            </div>
+            <Link to="#contact-me"><img src={github} alt="github-icon" className='github-icon'/></Link>
+          </div>
+
+          <div className="flip-card-back">
+            <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
+            <h2 className='section-title'>Super Mario Bros</h2>
+          </div>
+       </div>
+      </div>
+
+      <div className="flip-card">
+        <div className={`flip-card-inner ${flip === 4 ? "flipped" : flip === 5 ? "" : ""}`}>
+          <div className="flip-card-front" style={{background:`url(${gymImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+            <div>
+              <Link to="#contact-me" className='button-link website-link'>See more</Link>
+              <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
+            </div>
+            <Link to="#contact-me"><img src={github} alt="github-icon" className='github-icon'/></Link>
+          </div>
+
+          <div className="flip-card-back">
+            <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
+            <h2 className='section-title'>FitHub</h2>
+          </div>
+       </div>
+      </div>
+
+      <div className="flip-card">
+        <div className={`flip-card-inner ${flip === 6 ? "flipped" : flip === 7 ? "" : ""}`}>
+          <div className="flip-card-front" style={{background:`url(${gymImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+            <div>
+              <Link to="#contact-me" className='button-link website-link'>See more</Link>
+              <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
+            </div>
+            <Link to="#contact-me"><img src={github} alt="github-icon" className='github-icon'/></Link>
+          </div>
+
+          <div className="flip-card-back">
+            <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
+            <h2 className='section-title'>Super Mario Bros</h2>
+          </div>
+       </div>
       </div>
     </div>
   )

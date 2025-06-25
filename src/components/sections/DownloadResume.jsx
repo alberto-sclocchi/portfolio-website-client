@@ -14,6 +14,6 @@ const handleClick = () => {
     document.body.removeChild(link);
 };
   return (
-    <button onClick={handleClick} className='website-link'>Resume</button>
+    <button onClick={handleClick} className='button-link'>Resume</button>
   )
 }
