@@ -37,7 +37,7 @@ export default function MessageForm() {
   }
 
   return (
-    <div className="section" id="message-me">
+    <div id="message-me">
       <h2 className="section-title">Contact Me</h2>
       <div>
         <form onSubmit={handleSubmit}>

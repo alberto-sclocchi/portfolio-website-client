@@ -17,6 +17,10 @@
   margin: 0;
   padding: 0;
   max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 *{
@@ -118,7 +122,7 @@ nav{
 }
 
 #about-me{
-  padding-top: 10vh;
+  padding-top: 6vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -128,8 +132,8 @@ nav{
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh; /* Make sure body takes full height */
   width: 100%;
+  min-height: 100vh;
 }
 
 .profile-img {
@@ -137,6 +141,13 @@ nav{
   flex-direction: column;
   align-items: center;
   animation: popIn 1s cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.profile-img div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes popIn {
@@ -189,11 +200,12 @@ nav{
 .about-me-title span{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.2vw;
   background-color: #051016;
   padding: 0.6vw 0.7vw;
   border-radius: 10px;
-  height: 60%;
+  height: 70%;
   font-size: 1.2rem;
 }
 
@@ -365,7 +377,6 @@ nav{
   width: 40vw;
   height: 40vh;
   perspective: 1000px; /* Enables 3D effect */
-  cursor: pointer;
 }
 
 .flip-card-inner {
@@ -373,7 +384,7 @@ nav{
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 1.7s cubic-bezier(0.3, 0, 0.2, 1); /* smoother and slower */
+  transition: transform 1.7s cubic-bezier(0.3, 0, 0.2, 1); 
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -392,7 +403,6 @@ nav{
 }
 
 .flip-card-front {
-  background-color: #000; /* fallback for empty areas */
   display: flex;
   flex-direction: column;
   justify-content: space-between;  
@@ -557,6 +567,7 @@ nav{
   width: 80vw;
   font-size: 22px;
   font-weight: 900;
+  padding: 8vw 0;
 }
 
 #message-me > div{
@@ -654,6 +665,156 @@ nav{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
+  nav{
+    width: 70vw;
+    height: 5.5vw;
+  } 
 
+  .up-arrow{
+    left: 85vw;
+    width: 5vw;
+    height: 5vw;
+  }
+
+  #about-me{
+    flex-direction: column;
+    padding: 14vh 0;
+  }
+
+  .description-div{
+    width: 85%;
+  }
+
+  .about-me-title span:not(:first-of-type){
+    display: none;
+  }
+
+  .flip-icon,
+  .github-icon{
+    width: 3.5vw;
+  }
+
+  .social-icon img{
+    width: 4.5vw;
+  }
+
+  .nav-link{
+    font-size: 1.15rem;
+  }
+
+  .profile-img {
+    flex-direction: row;
+    gap: 6vw;
+  }
+
+  .profile-img img{
+    width: 40vw;
+  }
+
+  #message-me form,
+  .important-info{
+    gap: 2.2vw;
+  }
+
+  .form-div input,
+  .form-div textarea,
+  .important-info input{
+    font-size: 1.1rem;
+  }
+
+  .section-title{
+    font-size: 1.7rem;
+  }
+
+  .tech-img{
+    width: 7vw;
+  }
+
+  .express-img{
+    width: 7vw;
+  }
+
+  .java-img{
+    width: 6.5vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  nav{
+    width: 75vw;
+    height: 7vw;
+    top: 1.75vw;
+  } 
+
+  .up-arrow{
+    left: 85vw;
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .profile-img img{
+    width: 50vw;
+  }
+
+  .tech-img{
+    width: 8vw;
+  }
+
+  .express-img{
+    width: 8vw;
+  }
+
+  .java-img{
+    width: 7.5vw;
+  }
+
+  #message-me>div>div{
+    display: none;
+  }
+  
+  #message-me form{
+    width: 80vw;
+  }
+
+  #message-me input{
+    height: 4.5vw;
+  }
+  
+  #message-me form,
+  .important-info{
+    gap: 2.7vw;
+  }
+
+  .up-arrow{
+    left: 82.5vw;
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .social-icon img{
+    width: 5.5vw;
+  }
+
+  .projects-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5vw;
+  }
+
+  .flip-card{
+    width: 80vw;
+  }
+  
+  .flip-icon,
+  .github-icon{
+    width: 5vw;
+  }
+
+  .website-link{
+    width: 15vw;
+    height: 2.5vw;
+  }
 }

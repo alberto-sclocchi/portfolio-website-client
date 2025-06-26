@@ -10,7 +10,7 @@ export default function AboutMe() {
       <div className="description-div">
         <div className='about-me-title'>
           <h2 className="section-title">About Me</h2>
-          <span><img src={locationIcon} alt="location-icon" />MIAMI, FL</span>
+          <span className='span'><img src={locationIcon} alt="location-icon" />MIAMI, FL</span>
           <span>FULL-STACK DEVELOPER</span>
           <span><span id="hello-emoji">👋</span></span>
         </div>
@@ -19,8 +19,10 @@ export default function AboutMe() {
       </div>
       <div className="profile-img">
         <img src={profileImg} alt="alberto-sclocchi-img"/>
-        <h3>Alberto Sclocchi <img src={verified} alt="verified"/></h3>
-        <DownloadResume />
+        <div>
+          <h3>Alberto Sclocchi <img src={verified} alt="verified"/></h3>
+          <DownloadResume />
+        </div>
       </div>
     </div>
   )
