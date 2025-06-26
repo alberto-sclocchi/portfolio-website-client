@@ -793,7 +793,7 @@ nav{
   }
 
   .social-icon img{
-    width: 5.5vw;
+    width: 6vw;
   }
 
   .projects-div{
@@ -810,11 +810,15 @@ nav{
   
   .flip-icon,
   .github-icon{
-    width: 5vw;
+    width: 6.5vw;
   }
 
   .website-link{
     width: 15vw;
     height: 2.5vw;
   }
+
+   .about-me-title span{
+    height: 4.5vw;
+   }
 }
