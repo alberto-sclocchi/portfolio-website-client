@@ -37,28 +37,18 @@ export default function MessageForm() {
   }
 
   return (
-    <div className="section" id="contact-me">
+    <div id="message-me">
       <h2 className="section-title">Contact Me</h2>
       <div>
         <form onSubmit={handleSubmit}>
           <div className="important-info">
-            <div>
-              <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder='First Name'/>
-            </div>
-
-            <div>
-              <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder='Last Name'/>
-            </div>
+            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder='First Name'/>
+            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder='Last Name'/>
           </div>
 
           <div className="important-info">
-            <div>
-              <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder='Email'/>
-            </div>
-
-            <div>
-              <input type="text" name="number" value={formData.number} onChange={handleChange}  placeholder='Phone Number'/>
-            </div>
+            <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder='Email'/>
+            <input type="text" name="number" value={formData.number} onChange={handleChange}  placeholder='Phone Number'/>
           </div>
 
           <div className="form-div">
@@ -66,11 +56,11 @@ export default function MessageForm() {
           </div>
 
           <div className="form-div">
-              <textarea type="text" name="message" value={formData.message} onChange={handleChange} placeholder='Message'/>
+              <textarea type="text" name="message" value={formData.message} onChange={handleChange} placeholder="Type your message here... (e.g. Let's connect, collaborate, or just say hi!)"/>
           </div>
 
           <div className='button-div'>
-            <button className='website-link'>Send</button>
+            <button className='button-link'>Send</button>
             {!!result && <p className='result'>{result}</p>}
           </div>
         </form>

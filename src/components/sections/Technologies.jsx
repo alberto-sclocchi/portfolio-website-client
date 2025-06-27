@@ -12,10 +12,13 @@ export default function Technologies() {
   }
 
   return (
-    <div className="section" id="skills">
-      <h2 className="section-title">Tech Skills</h2>
-      
-      <div className="cards">{displayTech()}</div>
+    <div id="skills">
+      <ul className="scroller-list" data-animated="true">
+        {displayTech()}
+      </ul>
+      <ul className="scroller-list" data-animated="true">
+        {displayTech()}
+      </ul>
     </div>
   )
 }
