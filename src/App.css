@@ -482,6 +482,7 @@ nav{
 
 .flip-icon:hover{
   animation: rotate 1.5s linear infinite;
+  cursor: pointer;
 }
 
 .flip-card-back div{
@@ -519,6 +520,7 @@ nav{
 .flip-card-back li:hover{
   scale: 1.1;
   opacity: 1;
+  cursor: pointer;
 }
 
 

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import PortfolioPage from './components/core/PortfolioPage';
@@ -13,7 +12,7 @@ function App() {
       <NavBar />
       <MessageProvider>
         <Routes>
-          <Route  exact path="/" element={<PortfolioPage />}/>
+          <Route  exact path="*" element={<PortfolioPage />}/>
         </Routes>
       </MessageProvider>
       <Footer />

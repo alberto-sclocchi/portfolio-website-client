@@ -5,6 +5,7 @@ import gymImg from '../../images/gym-img.jpeg'
 import marioImg from '../../images/mario-bros.png'
 import flipIcon from '../../images/flip-icon.png'
 import { HashLink as Link } from 'react-router-hash-link'
+import wordleImg from '../../images/wordle-img.png'
 
 export default function Projects() {
   const [ flip, setFlip ] = useState(null)
@@ -130,17 +131,25 @@ export default function Projects() {
 
         <div className="flip-card">
           <div className={`flip-card-inner ${flip === 6 ? "flipped" : flip === 7 ? "" : ""}`}>
-            <div className="flip-card-front" style={{background:`url(${gymImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+              <div className="flip-card-front" style={{background:`url(${wordleImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
               <div>
-                <Link to="#contact-me" className='button-link website-link'>website</Link>
-                <img src={flipIcon} alt="flip-icon" className='flip-icon'/>
+                <Link className='button-link website-link' to="https://github.com/alberto-sclocchi/wordle-game" target='_blank'>website</Link>
+                <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
               </div>
-              <Link to="#contact-me"><img src={github} alt="github-icon" className='github-icon'/></Link>
+              <Link to="https://github.com/alberto-sclocchi/wordle-game" target="_blank"><img src={github} alt="github-icon" className='github-icon'/></Link>
             </div>
 
             <div className="flip-card-back">
-              <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
-              <h2 className='section-title'>Super Mario Bros</h2>
+              <div>
+                <h2 className='section-title'>WordleLookAlike</h2>
+                <img src={flipIcon} alt="flip-icon" className='flip-icon'/>
+              </div>
+              <ul>
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
             </div>
         </div>
         </div>
