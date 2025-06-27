@@ -133,7 +133,7 @@ export default function Projects() {
           <div className={`flip-card-inner ${flip === 6 ? "flipped" : flip === 7 ? "" : ""}`}>
               <div className="flip-card-front" style={{background:`url(${wordleImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
               <div>
-                <Link className='button-link website-link' to="https://github.com/alberto-sclocchi/wordle-game" target='_blank'>website</Link>
+                <Link className='button-link website-link' to="https://wordlelookalike.netlify.app" target='_blank'>website</Link>
                 <span className="flip-button"><img src={flipIcon} alt="flip-icon" className='flip-icon'/></span>
               </div>
               <Link to="https://github.com/alberto-sclocchi/wordle-game" target="_blank"><img src={github} alt="github-icon" className='github-icon'/></Link>

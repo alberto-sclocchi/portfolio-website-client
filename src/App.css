@@ -477,7 +477,6 @@ nav{
   background-color: whitesmoke;
   border-radius: 50%;
   padding: 0.2vw;
-
 }
 
 .flip-icon:hover{
@@ -510,7 +509,7 @@ nav{
 
 .flip-card-back li{
   background-color: #157add;
-  padding: 0.5vw 1vw;
+  padding: 0.5vw 1.1vw;
   border-radius: 20px;
   opacity:0.9;
   font-size: 1.2rem;
@@ -823,4 +822,12 @@ nav{
    .about-me-title span{
     height: 4.5vw;
    }
+
+   .flip-card-back li{
+    font-size: 1.4rem;
+   }
+
+  .flip-card-back ul{
+    gap: 2vw;
+  }
 }
