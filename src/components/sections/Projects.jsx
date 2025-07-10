@@ -141,7 +141,7 @@ export default function Projects() {
 
             <div className="flip-card-back">
               <div>
-                <h2 className='section-title'>WordleLookAlike</h2>
+                <h2 className='section-title'>Wordle</h2>
                 <img src={flipIcon} alt="flip-icon" className='flip-icon'/>
               </div>
               <ul>

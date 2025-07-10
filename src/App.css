@@ -83,6 +83,90 @@ nav{
   z-index: 1000;
 }
 
+.navbar-opener{
+  display: none;
+  color: #051016;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  border-radius: 10px;
+  min-width: 15vw;
+  text-transform: uppercase;
+  font-family: 'Audiowide';
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.navbar-opener:hover{
+  scale:1.1;
+  opacity: 1;
+}
+
+.navbar-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(21, 31, 49));
+  background-repeat: no-repeat;
+  animation: navbarOverlay 1s ease-in-out;
+}
+
+
+@keyframes navbarOverlay {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+  
+}
+
+.navbar-overlay-content {
+  display: flex;
+  width: 80%;
+  height: 50%;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.navbar-overlay-content div{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  row-gap: 8vw;
+  padding: 5vw 0;
+}
+
+.close-btn {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  background: #157add;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 2rem;
+  cursor: pointer;
+  font-family: 'Audiowide';
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.close-btn:hover{
+  scale:1.1;
+  filter: brightness(1.2)
+}
 
 .nav-link{
   text-decoration: none;
@@ -99,6 +183,7 @@ nav{
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
 }
+
 
 .nav-link:hover{
   background-color: rgb(160, 159, 159);
@@ -118,6 +203,36 @@ nav{
 }
 
 .nav-link:hover::after{
+  width: 100%;
+}
+
+.nav-overlay-link{
+  text-decoration: none;
+  color: white;
+  font-family: 'Audiowide';
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  width: auto;
+  height: 100%;
+  padding: 2vw 0;
+  font-weight: 900;
+  background-color: #151f31;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-overlay-link::after{
+  content: '';
+  position: absolute;
+  left: 0; 
+  bottom: 0;
+  background-color: #157add;
+  width: 0;
+  height: 5px;
+  transition: width 0.5s ease-in-out;
+}
+
+.nav-overlay-link:hover::after{
   width: 100%;
 }
 
@@ -186,7 +301,7 @@ nav{
   align-items: flex-start;
   line-height: 29px;
   background-color: #151f31;
-  padding: 1vw 3vw;
+  padding: 2vw 3vw;
   border-radius: 10px;
   box-shadow: 0vw 0vw 1vw #157add;
   width: 57%;
@@ -729,29 +844,44 @@ nav{
   }
 
   .tech-img{
-    width: 7vw;
+    width: 9vw;
   }
 
   .express-img{
-    width: 7vw;
+    width: 9vw;
   }
 
   .java-img{
-    width: 6.5vw;
+    width: 8.5vw;
   }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 600px) {
+  .up-arrow{
+    display: none;
+  }
+
   nav{
-    width: 75vw;
+    width: 87.6%;
     height: 7vw;
-    top: 1.75vw;
+    top: 3vw;
+    background: transparent;
+    box-shadow: none;
+    justify-content: start;
+    justify-content: center;
+    position: absolute;
   } 
 
-  .up-arrow{
-    left: 85vw;
-    width: 5vw;
-    height: 5vw;
+  .navbar-opener{
+   display: block;
+ }
+
+  .nav-link{
+    display: none;
+  }
+
+  .navbar-opener{
+    display: block;
   }
 
   .profile-img img{
@@ -759,15 +889,15 @@ nav{
   }
 
   .tech-img{
-    width: 8vw;
+    width: 11vw;
   }
 
   .express-img{
-    width: 8vw;
+    width: 11vw;
   }
 
   .java-img{
-    width: 7.5vw;
+    width: 10.5vw;
   }
 
   #message-me>div>div{
@@ -779,22 +909,16 @@ nav{
   }
 
   #message-me input{
-    height: 4.5vw;
+    height: 7.5vw;
   }
   
   #message-me form,
   .important-info{
-    gap: 2.7vw;
-  }
-
-  .up-arrow{
-    left: 82.5vw;
-    width: 6vw;
-    height: 6vw;
+    gap: 3.2vw;
   }
 
   .social-icon img{
-    width: 6vw;
+    width: 7vw;
   }
 
   .projects-div{
@@ -830,4 +954,15 @@ nav{
   .flip-card-back ul{
     gap: 2vw;
   }
+
+  .description-div{
+    padding: 3vw 4vw
+  }
+
+  .form-div input,
+  .form-div textarea,
+  .important-info input{
+    padding: 0.8vw 0.9vw;
+  }
+
 }
