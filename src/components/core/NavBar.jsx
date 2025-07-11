@@ -18,7 +18,7 @@ export default function NavBar() {
         <div className="navbar-opener" onClick={handleClick}>menu</div>
       </nav>
        {isOpen && (
-        <div   className={`navbar-overlay ${isOpen && 'opening'}`}>
+        <div   className="navbar-overlay">
           <div className="navbar-overlay-content">
             <button className="close-btn" onClick={handleClick}>X</button>
             <div>

@@ -966,3 +966,58 @@ nav{
   }
 
 }
+
+
+@media only screen and (max-width: 430px) {
+
+  nav{
+    top: 7vw;
+  }
+
+  .nav-overlay-link{
+    font-size: 2.3rem;
+  }
+
+  .profile-img {
+    gap: 2vw;
+  }
+
+  .profile-img img{
+    width: 45vw;;
+  }
+
+  .tech-img{
+    width: 14vw;
+  }
+
+  .express-img{
+    width: 14vw;
+  }
+
+  .java-img{
+    width: 13.5vw;
+  }
+
+  .button-link{
+    padding: 10px 25px;
+  }
+
+  .flip-icon,
+  .github-icon{
+    width: 7.5vw;
+  }
+
+  #footer{
+    font-size: 0.8rem;
+  }
+
+  .social-icon img{
+    width: 8vw;
+  }
+
+  #message-me form,
+  .important-info{
+    gap: 3.7vw;
+  }
+}
+
