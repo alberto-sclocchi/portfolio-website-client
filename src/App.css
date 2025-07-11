@@ -732,6 +732,7 @@ nav{
 .form-div textarea,
 .important-info input{
   width: 100%;
+  box-sizing: border-box;
   font-size: 1.2rem;
   font-family: 'Audiowide';
   padding: 0.5vw 0.7vw;
@@ -1018,6 +1019,24 @@ nav{
   #message-me form,
   .important-info{
     gap: 3.7vw;
+  }
+
+  .form-div input,
+  .form-div textarea,
+  .important-info input{
+    font-size: 1.3rem;
+  }
+
+  #message-me input{
+    height: 10.5vw;
+  }
+
+  .form-div textarea{
+    height: 250px;
+  }
+
+  .important-info:not(:first-of-type){
+    flex-direction: column;
   }
 }
 

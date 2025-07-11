@@ -46,7 +46,7 @@ export default function MessageForm() {
             <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder='Last Name'/>
           </div>
 
-          <div className="important-info">
+          <div className="important-info email-number">
             <input type="text" name="email" value={formData.email} onChange={handleChange} placeholder='Email'/>
             <input type="text" name="number" value={formData.number} onChange={handleChange}  placeholder='Phone Number'/>
           </div>
