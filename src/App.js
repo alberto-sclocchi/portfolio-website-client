@@ -6,11 +6,20 @@ import UpArrow from './components/core/UpArrow';
 import Footer from './components/core/Footer';
 import { MessageProvider } from './components/message/context/MessageContext.context';
 import DarkMode from './components/core/DarkMode';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
-   const [ isDarkMode, setIsDarkMode ] = useState(true); 
+    // Load from localStorage, default to true if not set
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const stored = localStorage.getItem('isDarkMode');
+    return stored !== null ? JSON.parse(stored) : true;
+  });
+
+  // Save to localStorage whenever isDarkMode changes
+  useEffect(() => {
+    localStorage.setItem('isDarkMode', JSON.stringify(isDarkMode));
+  }, [isDarkMode]);
   
   return (
     <div className="App">
