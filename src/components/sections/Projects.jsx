@@ -6,6 +6,7 @@ import marioImg from '../../images/mario-bros.png'
 import flipIcon from '../../images/flip-icon.png'
 import { HashLink as Link } from 'react-router-hash-link'
 import wordleImg from '../../images/wordle-img.png'
+import { motion } from "motion/react"
 
 export default function Projects() {
   const [ flip, setFlip ] = useState(null)
@@ -14,7 +15,7 @@ export default function Projects() {
     const projects = document.querySelectorAll(".flip-icon");
 
     projects.forEach((project, i) => {
-      console.log("here clicking", i)
+      // console.log("here clicking", i)
       project.addEventListener("click", () => {
         projects.forEach((otherProject, index) => {
           if(project === otherProject){
@@ -35,10 +36,15 @@ export default function Projects() {
   }, [setFlip])
   return (
     <div id="projects">    
-      <h2 className="section-title">Projects</h2>  
+      {/* <h2 className="section-title">Projects</h2>   */}
       {/* <h2 className='section-title'>{flip}</h2> */}
       <div className='projects-div'>
-        <div className="flip-card">
+        <motion.div 
+        initial={{y: -30, opacity: 0}} 
+        whileInView={{y:0 , opacity: 1}} 
+        transition={{duration: 0.8, type: 'spring', stiffness: 100}} 
+        className="flip-card"
+        >
           <div className={`flip-card-inner ${flip === 0 ? "flipped" : flip === 1 ? "" : ""}`}>
             <div className="flip-card-front" style={{background:`url(${soccerImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
               <div>
@@ -68,10 +74,15 @@ export default function Projects() {
                 <li>Cloudinary</li>
               </ul>
             </div>
-        </div>
-        </div>
+          </div>
+        </motion.div>
 
-        <div className="flip-card">
+        <motion.div 
+        initial={{y: -30, opacity: 0}} 
+        whileInView={{y:0 , opacity: 1}} 
+        transition={{duration: 0.8, delay: 0.2, type: 'spring', stiffness: 100}} 
+        className="flip-card"
+        >
           <div className={`flip-card-inner ${flip === 2 ? "flipped" : flip === 3 ? "" : ""}`}>
             <div className="flip-card-front" style={{background:`url(${gymImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
               <div>
@@ -100,10 +111,15 @@ export default function Projects() {
                 <li>Cloudinary</li>
               </ul>
             </div>
-        </div>
-        </div>
+          </div>
+        </motion.div>
 
-        <div className="flip-card">
+        <motion.div 
+        initial={{y: 30, opacity: 0}} 
+        whileInView={{y: 0, opacity: 1}} 
+        transition={{duration: 0.8, delay: 0.4, type: 'spring', stiffness: 100}} 
+        className="flip-card"
+        >
           <div className={`flip-card-inner ${flip === 4 ? "flipped" : flip === 5 ? "" : ""}`}>
             <div className="flip-card-front" style={{background:`url(${marioImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
               <div>
@@ -126,10 +142,15 @@ export default function Projects() {
                 <li>Object Oriented Programming (OOB)</li>
               </ul>
             </div>
-        </div>
-        </div>
+          </div>
+        </motion.div>
 
-        <div className="flip-card">
+        <motion.div 
+        initial={{y: 30, opacity: 0}} 
+        whileInView={{y: 0, opacity: 1}} 
+        transition={{duration: 0.8, delay: 0.6, type: 'spring', stiffness: 100}} 
+        className="flip-card"
+        >
           <div className={`flip-card-inner ${flip === 6 ? "flipped" : flip === 7 ? "" : ""}`}>
               <div className="flip-card-front" style={{background:`url(${wordleImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
               <div>
@@ -152,7 +173,7 @@ export default function Projects() {
               </ul>
             </div>
         </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   )

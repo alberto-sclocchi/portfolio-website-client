@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "motion/react"
 
 export default function DownloadResume() {
 
@@ -14,6 +15,14 @@ const handleClick = () => {
     document.body.removeChild(link);
 };
   return (
-    <button onClick={handleClick} className='button-link'>Resume</button>
+    <motion.button 
+    onClick={handleClick} 
+    className='button-link'
+    initial={{opacity: 0}} 
+    whileInView={{opacity: 1}} 
+    transition={{duration: 0.6, delay: 0.4}} 
+    >
+      Resume
+    </motion.button> 
   )
 }
