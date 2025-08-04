@@ -5,9 +5,9 @@ import linkedIn from '../../images/linkedin-icon.png'
 import gitHub from '../../images/github-icon.png'
 import gmail from '../../images/gmail-icon.png'
 
-export default function Footer() {
+export default function Footer({ isDarkMode }) {
   return (
-    <footer id="footer">
+    <footer id="footer" className={`${!!isDarkMode ? "dark-mode-section-1" : "light-mode-section-1"}`}>
       <div className="social-icon-div">
         <Link className="social-icon" to="https://www.instagram.com/_albe.s_/" target="_blank"><img src={instagram} alt="instagram"/></Link>
         <Link className="social-icon" to="https://www.linkedin.com/in/alberto-sclocchi/" target="_blank"><img src={linkedIn} alt="linkedIn"/></Link>

@@ -3,7 +3,6 @@
 
 .App{
   text-align: center;
-  background-color: #051016;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,6 +10,32 @@
   color: whitesmoke;
   font-family: 'Lato';
 }
+
+.light-mode-section-1{
+  background-color: #8bbae9;
+  color: #151f31;
+  box-shadow: 0 0 1vw #157add;
+  border: 1.5px solid #157add;
+}
+
+.light-mode-section-2{
+  background-color: #157add;
+  box-shadow: 0 0 1vw #157add;
+  border: 1.5px solid #157add;
+}
+
+.dark-mode-section-1{
+  background-color: #151f31;
+  box-shadow: 0 0 1vw #157add;
+  border: 1.5px solid #157add;
+}
+
+.dark-mode-section-2{
+  background-color: #051016;
+  box-shadow: 0 0 1vw #157add;
+  border: 1.5px solid #157add;
+}
+
 
 .portfolio{
   overflow: hidden;
@@ -41,31 +66,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: whitesmoke;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.section{
-  /* height: 400px; */
-  margin: 20px 120px;
-  padding-top: 10vh;
-  width: 80vw; 
-  color: rgba(255, 255, 255, 0.906); 
-}
-
 nav{
-  background-color: #151f31;
   box-shadow: 0vw 0vw 1vw #157add;
   width: 60vw;
   height: 4vw;
@@ -76,12 +77,12 @@ nav{
   align-items: center;
   position: fixed;
   top: 1.2vw;
-  padding: 0vw 1.5vw;
   font-family: 'Audiowide';
+  padding: 0 1.5vw;
   font-size: 1.3rem;
   letter-spacing: 1px;
   z-index: 1000;
-}
+} 
 
 .navbar-opener{
   display: none;
@@ -178,7 +179,6 @@ nav{
   padding: 0 1.5vw;
   font-weight: 900;
   overflow: hidden;
-  background-color: #151f31;
   position: relative;
   transition: all 0.3s ease-in-out;
   text-transform: uppercase;
@@ -300,7 +300,6 @@ nav{
   flex-direction: column;
   align-items: flex-start;
   line-height: 29px;
-  background-color: #151f31;
   padding: 2vw 3vw;
   border-radius: 10px;
   box-shadow: 0vw 0vw 1vw #157add;
@@ -312,15 +311,14 @@ nav{
   font-size: 1.4rem;
 }
 
-.about-me-title span{
+.about-me-title > span{
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.2vw;
-  background-color: #051016;
   padding: 0.6vw 0.7vw;
   border-radius: 10px;
-  height: 70%;
+  height: 6vh;
   font-size: 1.2rem;
 }
 
@@ -339,6 +337,7 @@ nav{
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 2vw;
   font-family: 'Audiowide';
   width: 100%;
@@ -452,8 +451,6 @@ nav{
   --gap: 20px;
   gap: var(--gap);
   overflow: hidden;
-  background-color: #151f31;
-  border: 1.5px solid #157add;
 }
 
 .scroller-list[data-animated="true"]{
@@ -750,14 +747,11 @@ nav{
 #footer{
   width: 100%;
   height: auto;
-  background-color: red;
   color: rgba(255, 255, 255, 0.906); 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #151f31;
-  box-shadow: 0 0 10px #157add;
 }
 
 .social-icon-div{
@@ -782,8 +776,56 @@ nav{
   font-family: 'Audiowide';
 }
 
+.dark-mode-toggle{
+  position: absolute;
+  top: 1.2vw;
+  right: 1.5vw;
+  top: 1.2vw;
+  height: 5vw;
+  width: 10vw;
+  background-color: #151f31;
+  border-radius: 11rcap;
+  box-shadow: 0vw 0vw 1vw #157add;
+  display: flex;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+.toggled-div{
+  background-color: #8bbae9;
+}
+
+.toggle-button{
+  background-color: #4888c8;
+  color: white;
+  border: none;
+  height: 100%;
+  width: 5vw;
+  border-radius: 10px;
+  padding: 0.5vw 1vw;
+  text-align: center;
+  font-family: 'Audiowide';
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 11rcap;
+  /* display: flex; */
+  transition: transform 0.5s ease-in-out;
+  transform: translateX(0%); 
+
+}
+
+.toggled {
+ transform: translateX(100%); 
+ background-color: #151f31;
+}
+
 
 @media only screen and (max-width: 900px) {
+
+  .dark-mode-toggle{
+    display: none;
+  }
+
   nav{
     width: 70vw;
     height: 5.5vw;
@@ -856,6 +898,10 @@ nav{
   .java-img{
     width: 8.5vw;
   }
+
+   .about-me-title span{
+    height: 5vh;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -878,12 +924,22 @@ nav{
    display: block;
  }
 
-  .nav-link{
+  .nav-link,
+  nav button{
     display: none;
   }
 
   .navbar-opener{
     display: block;
+  }
+
+  .profile-img {
+    gap: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   .profile-img img{
@@ -945,9 +1001,9 @@ nav{
     height: 2.5vw;
   }
 
-   .about-me-title span{
-    height: 4.5vw;
-   }
+  .about-me-title span{
+    height: 4vh;
+  }
 
    .flip-card-back li{
     font-size: 1.4rem;
@@ -980,12 +1036,9 @@ nav{
     font-size: 2.3rem;
   }
 
-  .profile-img {
-    gap: 2vw;
-  }
 
   .profile-img img{
-    width: 45vw;;
+    width: 50vw;;
   }
 
   .tech-img{

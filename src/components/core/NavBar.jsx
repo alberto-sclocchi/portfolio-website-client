@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 
-export default function NavBar() {
-
+export default function NavBar({ isDarkMode }) {
   const [ isOpen, setIsOpen ] = useState(false);
 
   const handleClick = () => {
@@ -11,7 +10,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav>
+      <nav className={`${isDarkMode ? "dark-mode-section-1" : "light-mode-section-1"}`}>
         <Link className="nav-link" to="#about-me">About Me</Link>
         <Link className="nav-link" to="#projects">Projects</Link>
         <Link className="nav-link" to="#message-me">Message Me</Link>

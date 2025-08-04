@@ -3,7 +3,7 @@ import coolEffect from '../../images/cool-effect.gif'
 import MessageContext from './context/MessageContext.context'
 import { motion } from "motion/react"
 
-export default function MessageForm() {
+export default function MessageForm({ isDarkMode}) {
   const [ formData, setFormData ] = useState({
     firstName: "",
     lastName: "",

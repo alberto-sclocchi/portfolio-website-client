@@ -1,14 +1,13 @@
-import React from 'react'
 import profileImg from '../../images/alberto-sclocchi.jpeg'
-import verified from '../../images/verified.png'
+// import verified from '../../images/verified.png'
 import DownloadResume from './DownloadResume'
 import locationIcon from './../../images/location.png'
 import { motion } from "motion/react"
 
-export default function AboutMe() {
+export default function AboutMe({ isDarkMode}) {
   return (
     <div id="about-me">
-      <div className="description-div">
+      <div className={`description-div ${isDarkMode ? "dark-mode-section-1" : "light-mode-section-1"}`}>
         <div className='about-me-title'>
           <motion.h2 
           initial={{y: -20, opacity: 0}} 
@@ -18,7 +17,7 @@ export default function AboutMe() {
             About Me
           </motion.h2>
           <motion.span 
-          className='span'
+          className={`${isDarkMode ? "dark-mode-section-2" : "light-mode-section-2"}`}
           initial={{scale: 0, opacity: 0}} 
           whileInView={{scale: 1, opacity: 1}} 
           transition={{duration: 0.6, delay: 0.4}}
@@ -27,6 +26,7 @@ export default function AboutMe() {
               MIAMI, FL
           </motion.span>
           <motion.span
+          className={`${isDarkMode ? "dark-mode-section-2" : "light-mode-section-2"}`}
           initial={{scale: 0, opacity: 0}} 
           whileInView={{scale: 1, opacity: 1}} 
           transition={{duration: 0.8, delay: 0.6}}
@@ -34,6 +34,7 @@ export default function AboutMe() {
             FULL-STACK DEVELOPER
           </motion.span>
           <motion.span
+          className={`${isDarkMode ? "dark-mode-section-2" : "light-mode-section-2"}`}
           initial={{scale: 0, opacity: 0}} 
           whileInView={{scale: 1, opacity: 1}} 
           transition={{duration: 0.6, delay: 0.8}}
@@ -59,7 +60,7 @@ export default function AboutMe() {
           transition={{duration: 0.8, delay: 0.2}} 
           className="section-title">
             Alberto Sclocchi 
-            <img src={verified} alt="verified"/>
+            {/* <img src={verified} alt="verified"/> */}
           </motion.h3>
           <DownloadResume />
         </div>

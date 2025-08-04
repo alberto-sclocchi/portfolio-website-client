@@ -3,12 +3,12 @@ import github from '../../images/git-hub-proj.png'
 import soccerImg from '../../images/soccer-img.jpeg'
 import gymImg from '../../images/gym-img.jpeg'
 import marioImg from '../../images/mario-bros.png'
-import flipIcon from '../../images/flip-icon.png'
+// import flipIcon from '../../images/flip-icon.png'
 import { HashLink as Link } from 'react-router-hash-link'
 import wordleImg from '../../images/wordle-img.png'
 import { motion } from "motion/react"
 
-export default function Projects() {
+export default function Projects({ isDarkMode }) {
   const [ flip, setFlip ] = useState(null)
 
   useEffect(() => {
@@ -35,7 +35,7 @@ export default function Projects() {
 
   }, [setFlip])
   return (
-    <div id="projects">    
+    <div id="projects" >    
       {/* <h2 className="section-title">Projects</h2>   */}
       {/* <h2 className='section-title'>{flip}</h2> */}
       <div className='projects-div'>
