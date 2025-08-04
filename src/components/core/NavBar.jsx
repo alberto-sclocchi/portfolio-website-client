@@ -10,7 +10,7 @@ export default function NavBar({ isDarkMode }) {
 
   return (
     <>
-      <nav className={`${isDarkMode ? "dark-mode-section-1" : "light-mode-section-1"}`}>
+      <nav className={`${!!isDarkMode ? "dark-mode-section-nav" : "light-mode-section-nav"}`}>
         <Link className="nav-link" to="#about-me">About Me</Link>
         <Link className="nav-link" to="#projects">Projects</Link>
         <Link className="nav-link" to="#message-me">Message Me</Link>

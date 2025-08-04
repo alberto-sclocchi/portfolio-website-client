@@ -11,6 +11,7 @@
   font-family: 'Lato';
 }
 
+.light-mode-section-nav,
 .light-mode-section-1{
   background-color: #8bbae9;
   color: #151f31;
@@ -24,6 +25,7 @@
   border: 1.5px solid #157add;
 }
 
+.dark-mode-section-nav,
 .dark-mode-section-1{
   background-color: #151f31;
   box-shadow: 0 0 1vw #157add;
@@ -909,6 +911,7 @@ nav{
     display: none;
   }
 
+  .dark-mode-section-nav,
   nav{
     width: 87.6%;
     height: 7vw;
@@ -918,7 +921,9 @@ nav{
     justify-content: start;
     justify-content: center;
     position: absolute;
+    border: none;
   } 
+
 
   .navbar-opener{
    display: block;
@@ -972,7 +977,7 @@ nav{
   
   #message-me form,
   .important-info{
-    gap: 3.2vw;
+    row-gap: 4vw;
   }
 
   .social-icon img{
@@ -1072,7 +1077,11 @@ nav{
 
   #message-me form,
   .important-info{
-    gap: 3.7vw;
+    row-gap: 5vw;
+  }
+
+  .result{
+    font-size: 0.8rem;
   }
 
   .form-div input,
