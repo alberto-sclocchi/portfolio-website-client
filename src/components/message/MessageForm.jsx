@@ -13,11 +13,11 @@ export default function MessageForm({ isDarkMode}) {
     message: ""
   })
 
-  const { sendMessage, result } = useContext(MessageContext)
+  const { sendMessage, result, loading} = useContext(MessageContext)
 
   const handleChange = (event) => {
     setFormData((prevState) => ({...prevState, [event.target.name]: event.target.value}))
-    console.log(formData);
+    // console.log(formData);
   }
 
   const handleSubmit = (event) => {
@@ -41,7 +41,7 @@ export default function MessageForm({ isDarkMode}) {
     <div id="message-me">
       <h2 className="section-title">Contact Me</h2>
       <div>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={!!loading ? (event) => {event.preventDefault()} : handleSubmit}>
           <motion.div 
           initial={{y: -20, opacity: 0}} 
           whileInView={{y:0 , opacity: 1}} 
@@ -87,7 +87,7 @@ export default function MessageForm({ isDarkMode}) {
             transition={{duration: 0.6, delay: 0.8}} 
             className='button-link'
             >
-              Send
+              {!!loading ? <div className='spinner'></div> : "Send"}
             </motion.button>
             {!!result && <p className='result'>{result}</p>}
           </div>
