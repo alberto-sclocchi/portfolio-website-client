@@ -525,7 +525,7 @@ nav{
 
 }
 
-.flip-card-front div{
+.flip-card-front > div{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -584,6 +584,7 @@ nav{
   100% {transform: rotate(0deg)}
 }
 
+/* 
 .flip-icon{
   margin: 1vw 2vw;
   width: 2.7vw;
@@ -597,9 +598,9 @@ nav{
 .flip-icon:hover{
   animation: rotate 1.5s linear infinite;
   cursor: pointer;
-}
+} */
 
-.flip-card-back div{
+.flip-card-back > div{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -807,7 +808,7 @@ nav{
     display: none;
   }
 
-  .flip-icon,
+  /* .flip-icon, */
   .github-icon{
     width: 3.5vw;
   }
@@ -934,7 +935,7 @@ nav{
     width: 80vw;
   }
   
-  .flip-icon,
+  /* .flip-icon, */
   .github-icon{
     width: 6.5vw;
   }
@@ -1003,7 +1004,7 @@ nav{
     padding: 10px 25px;
   }
 
-  .flip-icon,
+  /* .flip-icon, */
   .github-icon{
     width: 7.5vw;
   }
