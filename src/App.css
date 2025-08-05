@@ -15,13 +15,13 @@
 .light-mode-section-1{
   background-color: #8bbae9;
   color: #151f31;
-  box-shadow: 0 0 1vw #157add;
-  border: 1.5px solid #157add;
+  box-shadow: 0 0 1vw #151f31;
+  /* border: 1.5px solid #151f31; */
 }
 
 .light-mode-section-2{
   background-color: #157add;
-  box-shadow: 0 0 1vw #157add;
+  box-shadow: 0 0 1vw #151f31;
   border: 1.5px solid #157add;
 }
 
@@ -844,6 +844,23 @@ nav{
 .light-mode-icon{
   width: 2.5vw;
   height: 2.5vh;
+}
+
+.download-resume-button{
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.5vw;
+  align-items: center;
+}
+
+.download-resume-button span{
+  font-size: 1.4rem;
+  transform: rotate(-45deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+.download-resume-button:hover span{
+  transform: rotate(0deg);
 }
 
 
