@@ -131,7 +131,7 @@ export default function Projects({ isDarkMode }) {
 
             <div className="flip-card-back">
               <div>
-                <h2 className='section-title'>Super Mario Bros</h2>
+                <h2 className='section-title'>Super Mario</h2>
                 <div className='flip-icon button-link website-link'>Unflip</div>
               </div>
               <ul>
