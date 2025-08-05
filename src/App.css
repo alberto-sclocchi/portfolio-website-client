@@ -35,7 +35,6 @@
 .dark-mode-section-2{
   background-color: #051016;
   box-shadow: 0 0 1vw #157add;
-  border: 1.5px solid #157add;
 }
 
 .spinner{
@@ -709,7 +708,7 @@ nav{
 }
 
 #message-me img{
-  width: 20vw;
+  width: 25vw;
 }
 
 #message-me form{
@@ -720,6 +719,7 @@ nav{
   align-items: start;
   justify-content: center;
   gap: 1.5vw;
+  z-index: 2;
 }
 
 #message-me input{
@@ -861,6 +861,12 @@ nav{
 
 .download-resume-button:hover span{
   transform: rotate(0deg);
+}
+
+
+@keyframes glowPulse {
+  0%   { opacity: 0.2; filter: blur(30px);}
+  100% { opacity: 0.5;   filter: blur(50px);}
 }
 
 
