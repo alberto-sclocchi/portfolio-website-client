@@ -836,6 +836,16 @@ nav{
  background-color: #151f31;
 }
 
+.dark-mode-icon{
+  width: 2vw;
+  height: 2vh;
+}
+
+.light-mode-icon{
+  width: 2.5vw;
+  height: 2.5vh;
+}
+
 
 @media only screen and (max-width: 900px) {
 
