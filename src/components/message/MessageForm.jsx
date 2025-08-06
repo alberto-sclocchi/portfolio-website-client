@@ -39,7 +39,7 @@ export default function MessageForm({ isDarkMode}) {
 
   return (
     <div id="message-me">
-      <h2 className="section-title">Contact Me</h2>
+      <h2 className="section-title">Message Me</h2>
       <div className='glow-bg'>
         <form onSubmit={!!loading ? (event) => {event.preventDefault()} : handleSubmit}>
           <motion.div 

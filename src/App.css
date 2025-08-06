@@ -25,6 +25,11 @@
   border: 1.5px solid #157add;
 }
 
+.light-mode-section-3{
+  color: #151f31;
+  box-shadow: 0 0 1vw #151f31;
+}
+
 .dark-mode-section-nav,
 .dark-mode-section-1{
   background-color: #151f31;
@@ -394,7 +399,7 @@ nav{
 }
 
 .social-icon img{
-  width: 3.5vw;
+  width: 4vw;
   opacity: 0.8;
   transition: all 0.3s ease-in-out;
 }
@@ -526,7 +531,6 @@ nav{
   height: 100%;
   backface-visibility: hidden;
   border-radius: 12px;
-  box-shadow: 0 0 10px #157add;
 }
 
 .flip-card-front {
@@ -863,6 +867,87 @@ nav{
   transform: rotate(0deg);
 }
 
+.dark-mode-section-3{
+  box-shadow: 0vw 0vw 1vw #157add;
+  border: 1.5px solid #157add;
+  color: whitesmoke;
+}
+
+.dark-mode-background{
+  background-image: url("./images/stars.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.light-mode-section-3{
+  box-shadow: 0 0 1vw #151f31;
+  /* border: 1.5px solid #151f31; */
+  color: #151f31;
+}
+
+.light-mode-background{
+  background-image: url("./images/clouds.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#contact-info{
+  font-size: 1.4rem;
+  padding-bottom: 5vw;
+  width: 80vw;
+  border-radius: 1.25vw;
+  margin-bottom: 4vw;
+  padding: 2vw;
+  position: relative;
+  overflow: hidden;
+}
+
+#contact-info ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 4vw;
+  padding: 1.5vw;
+}
+
+#contact-info li{
+  border-radius: 1.25vw;
+  padding: 1.5vw 2.5vw;
+}
+
+#contact-info a{
+  text-decoration: none;
+  position: relative;
+}
+
+#contact-info a[dark-mode="true"]{
+  color: whitesmoke;
+}
+
+#contact-info a[dark-mode="false"]{
+  color: #151f31;
+}
+
+#contact-info a::after{
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Position the line slightly below the text */
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the line */
+  background-color: #157add; /* Line color */
+  transition: width 0.5s ease-in-out; /* Smooth expansion */
+  z-index: 100000;
+}
+
+#contact-info a:hover::after {
+  width: 100%; /* Expand the line to full width on hover */
+}
+
+
 
 @keyframes glowPulse {
   0%   { opacity: 0.2; filter: blur(30px);}
@@ -1149,5 +1234,13 @@ nav{
   .important-info:not(:first-of-type){
     flex-direction: column;
   }
+
+  #contact-info ul{
+    flex-direction: column;
+    row-gap: 2.5vh;
+    font-size: 1.3rem;
+  }
+
+  
 }
 

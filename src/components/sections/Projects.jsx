@@ -46,7 +46,7 @@ export default function Projects({ isDarkMode }) {
         className="flip-card"
         >
           <div className={`flip-card-inner ${flip === 0 ? "flipped" : flip === 1 ? "" : ""}`}>
-            <div className="flip-card-front" style={{background:`url(${soccerImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+            <div className={`flip-card-front ${isDarkMode ? "dark-mode-section-3" : "light-mode-section-3"}`} style={{background:`url(${soccerImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
               <div>
                 <Link className='button-link website-link' to="https://project-soccer.onrender.com"  target='_blank'>website</Link>
                 <div className='flip-icon button-link website-link'>Flip</div>
@@ -54,7 +54,7 @@ export default function Projects({ isDarkMode }) {
               <Link to="https://github.com/alberto-sclocchi/project-soccer-app-api" target="_blank"><img src={github} alt="github-icon" className='github-icon'/></Link>
             </div>
 
-            <div className="flip-card-back">
+            <div className={`flip-card-back ${isDarkMode ? "dark-mode-section-3" : "light-mode-section-3"}`}>
               <div>
                 <h2 className='section-title'>KickShop</h2>
                 <div className='flip-icon button-link website-link'>Unflip</div>
@@ -84,7 +84,7 @@ export default function Projects({ isDarkMode }) {
         className="flip-card"
         >
           <div className={`flip-card-inner ${flip === 2 ? "flipped" : flip === 3 ? "" : ""}`}>
-            <div className="flip-card-front" style={{background:`url(${gymImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+            <div className={`flip-card-front ${isDarkMode ? "dark-mode-section-3" : "light-mode-section-3"}`} style={{background:`url(${gymImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
               <div>
                 <Link className='button-link website-link' to="https://project-gym-app-patient-wildflower-2606.fly.dev" target='_blank'>website</Link>
                 <div className='flip-icon button-link website-link'>Flip</div>
@@ -92,7 +92,7 @@ export default function Projects({ isDarkMode }) {
               <Link to="https://github.com/alberto-sclocchi/project-gym-app" target="_blank"><img src={github} alt="github-icon" className='github-icon'/></Link>
             </div>
 
-            <div className="flip-card-back">
+            <div className={`flip-card-back ${isDarkMode ? "dark-mode-section-3" : "light-mode-section-3"}`}>
               <div>
                 <h2 className='section-title'>FitHub</h2>
                 <div className='flip-icon button-link website-link'>Unflip</div>
@@ -121,7 +121,7 @@ export default function Projects({ isDarkMode }) {
         className="flip-card"
         >
           <div className={`flip-card-inner ${flip === 4 ? "flipped" : flip === 5 ? "" : ""}`}>
-            <div className="flip-card-front" style={{background:`url(${marioImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+            <div className={`flip-card-front ${isDarkMode ? "dark-mode-section-3" : "light-mode-section-3"}`} style={{background:`url(${marioImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
               <div>
                 <Link className='button-link website-link' to="https://alberto-sclocchi.github.io/project-mario-game/" target='_blank'>website</Link>
                 <div className='flip-icon button-link website-link'>Flip</div>
@@ -129,7 +129,7 @@ export default function Projects({ isDarkMode }) {
               <Link to="https://github.com/alberto-sclocchi/project-mario-game" target="_blank"><img src={github} alt="github-icon" className='github-icon'/></Link>
             </div>
 
-            <div className="flip-card-back">
+            <div className={`flip-card-back ${isDarkMode ? "dark-mode-section-3" : "light-mode-section-3"}`}>
               <div>
                 <h2 className='section-title'>Super Mario</h2>
                 <div className='flip-icon button-link website-link'>Unflip</div>
@@ -152,7 +152,7 @@ export default function Projects({ isDarkMode }) {
         className="flip-card"
         >
           <div className={`flip-card-inner ${flip === 6 ? "flipped" : flip === 7 ? "" : ""}`}>
-              <div className="flip-card-front" style={{background:`url(${wordleImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
+              <div className={`flip-card-front ${isDarkMode ? "dark-mode-section-3" : "light-mode-section-3"}`} style={{background:`url(${wordleImg})`, backgroundPosition:"center", backgroundSize:"cover", backgroundRepeat:"no-repeat"}}>
               <div>
                 <Link className='button-link website-link' to="https://wordlelookalike.netlify.app" target='_blank'>website</Link>
                 <div className='flip-icon button-link website-link'>Flip</div>
@@ -160,7 +160,7 @@ export default function Projects({ isDarkMode }) {
               <Link to="https://github.com/alberto-sclocchi/wordle-game" target="_blank"><img src={github} alt="github-icon" className='github-icon'/></Link>
             </div>
 
-            <div className="flip-card-back">
+            <div className={`flip-card-back ${isDarkMode ? "dark-mode-section-3" : "light-mode-section-3"}`}>
               <div>
                 <h2 className='section-title'>Wordle</h2>
                 <div className='flip-icon button-link website-link'>Unflip</div>
